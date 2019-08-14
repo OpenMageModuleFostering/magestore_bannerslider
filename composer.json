@@ -1,13 +1,13 @@
 {
-    "name": "OpenMageModuleFostering/magestore_bannerslider",
+    "name": "OpenMageModuleFostering/Magestore_BannerSlider",
     "type": "magento-module",
-    "license": "OSL-v3.0",
+    "license": "Open-Software-License-(OSL)",
     "homepage": "",
-    "description": "Banner slider",
+    "description": "Magestore_BannerSlider",
     "authors": [
     {
         "name": "Magestore",
-        "email": "magestore@gmail.com"
+        "email": "info@magestore.com"
     }
 ],
     "suggest": {
