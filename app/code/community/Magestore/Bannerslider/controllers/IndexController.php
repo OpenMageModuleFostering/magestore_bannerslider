@@ -1,5 +1,5 @@
 <?php
-class Magestore_BannerSlider_IndexController extends Mage_Core_Controller_Front_Action
+class Magestore_Bannerslider_IndexController extends Mage_Core_Controller_Front_Action
 {
     public function indexAction()
     {

@@ -1,6 +1,6 @@
 <?php
 
-class Magestore_BannerSlider_Adminhtml_BannerSliderController extends Mage_Adminhtml_Controller_action
+class Magestore_Bannerslider_Adminhtml_BannersliderController extends Mage_Adminhtml_Controller_Action
 {
 
 	protected function _initAction() {

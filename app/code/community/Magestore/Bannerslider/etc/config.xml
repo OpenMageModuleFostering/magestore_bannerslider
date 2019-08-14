@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Magestore_BannerSlider>
-            <version>0.1.1</version>
-        </Magestore_BannerSlider>
+        <Magestore_Bannerslider>
+            <version>1.0.2</version>
+        </Magestore_Bannerslider>
     </modules>
     <frontend>
         <routers>
             <bannerslider>
                 <use>standard</use>
                 <args>
-                    <module>Magestore_BannerSlider</module>
+                    <module>Magestore_Bannerslider</module>
                     <frontName>bannerslider</frontName>
                 </args>
             </bannerslider>
@@ -28,7 +28,7 @@
 			<bannerslider>
 				<use>admin</use>
 				<args>
-					<module>Magestore_BannerSlider</module>
+					<module>Magestore_Bannerslider</module>
 					<frontName>bannerslider</frontName>
 				</args>
 			</bannerslider>
@@ -37,7 +37,7 @@
     <adminhtml>
 		<menu>
 			<bannerslider module="bannerslider">
-				<title>BannerSlider</title>
+				<title>Bannerslider</title>
 				<sort_order>71</sort_order>               
 				<children>
 					<items module="bannerslider">
@@ -55,22 +55,10 @@
 				</all>
 				<admin>
 					<children>
-						<Magestore_BannerSlider>
-							<title>BannerSlider Module</title>
+						<Magestore_Bannerslider>
+							<title>Bannerslider Module</title>
 							<sort_order>10</sort_order>
-						</Magestore_BannerSlider>
-						<system>
-							<children>
-								<config>
-									<children>
-										<bannerslider translate="title" module="bannerslider"> 
-											<title>Banner Slider Settings</title>
-											<sort_order>50</sort_order>
-										</bannerslider>
-									</children>
-								</config>
-							</children>
-						</system>
+						</Magestore_Bannerslider>
 					</children>
 				</admin>
 			</resources>
@@ -86,11 +74,11 @@
     <global>
         <models>
             <bannerslider>
-                <class>Magestore_BannerSlider_Model</class>
+                <class>Magestore_Bannerslider_Model</class>
                 <resourceModel>bannerslider_mysql4</resourceModel>
             </bannerslider>
             <bannerslider_mysql4>
-                <class>Magestore_BannerSlider_Model_Mysql4</class>
+                <class>Magestore_Bannerslider_Model_Mysql4</class>
                 <entities>
                     <bannerslider>
                         <table>bannerslider</table>
@@ -101,7 +89,7 @@
         <resources>
             <bannerslider_setup>
                 <setup>
-                    <module>Magestore_BannerSlider</module>
+                    <module>Magestore_Bannerslider</module>
                 </setup>
                 <connection>
                     <use>core_setup</use>
@@ -120,12 +108,12 @@
         </resources>
         <blocks>
             <bannerslider>
-                <class>Magestore_BannerSlider_Block</class>
+                <class>Magestore_Bannerslider_Block</class>
             </bannerslider>
         </blocks>
         <helpers>
             <bannerslider>
-                <class>Magestore_BannerSlider_Helper</class>
+                <class>Magestore_Bannerslider_Helper</class>
             </bannerslider>
         </helpers>
     </global>

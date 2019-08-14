@@ -1,6 +1,6 @@
 <?php
 
-class Magestore_BannerSlider_Block_Adminhtml_BannerSlider_Grid extends Mage_Adminhtml_Block_Widget_Grid
+class Magestore_Bannerslider_Block_Adminhtml_Bannerslider_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
   public function __construct()
   {

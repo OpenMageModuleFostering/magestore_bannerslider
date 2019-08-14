@@ -1,6 +1,6 @@
 <?php
 
-class Magestore_BannerSlider_Model_Mysql4_BannerSlider_Collection extends Mage_Core_Model_Mysql4_Collection_Abstract
+class Magestore_Bannerslider_Model_Mysql4_Bannerslider_Collection extends Mage_Core_Model_Mysql4_Collection_Abstract
 {
     public function _construct()
     {

@@ -1,6 +1,6 @@
 <?php
 
-class Magestore_BannerSlider_Model_BannerSlider extends Mage_Core_Model_Abstract
+class Magestore_Bannerslider_Model_Bannerslider extends Mage_Core_Model_Abstract
 {
     public function _construct()
     {

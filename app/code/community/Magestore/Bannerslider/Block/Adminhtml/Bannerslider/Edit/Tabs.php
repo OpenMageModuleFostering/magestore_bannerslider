@@ -1,6 +1,6 @@
 <?php
 
-class Magestore_BannerSlider_Block_Adminhtml_BannerSlider_Edit_Tabs extends Mage_Adminhtml_Block_Widget_Tabs
+class Magestore_Bannerslider_Block_Adminhtml_Bannerslider_Edit_Tabs extends Mage_Adminhtml_Block_Widget_Tabs
 {
 
   public function __construct()
