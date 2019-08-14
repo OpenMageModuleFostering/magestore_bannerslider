@@ -127,7 +127,6 @@ class Magestore_Bannerslider_Adminhtml_Bannerslider_BannerController extends Mag
                 unset($data['image']);
             }
                               
-            $data = $this->_filterDateTime($data,array('start_time','end_time'));      
             try {
                  $data['start_time']=date('Y-m-d H:i:s',Mage::getModel('core/date')->gmtTimestamp(strtotime($data['start_time'])));
                  $data['end_time']=date('Y-m-d H:i:s',Mage::getModel('core/date')->gmtTimestamp(strtotime($data['end_time'])));

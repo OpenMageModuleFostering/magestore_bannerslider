@@ -23,7 +23,7 @@
 <config>
     <modules>
         <Magestore_Bannerslider>
-            <version>3.0.1</version>
+            <version>4.0.1</version>
         </Magestore_Bannerslider>
     </modules>
     <frontend>
