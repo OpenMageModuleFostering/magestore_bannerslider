@@ -26,7 +26,7 @@
  * @package 	Magestore_Bannerslider
  * @author  	Magestore Developer
  */
-class Magestore_Bannerslider_Adminhtml_StandardsliderController extends Mage_Adminhtml_Controller_Action
+class Magestore_Bannerslider_Adminhtml_Bannerslider_StandardsliderController extends Mage_Adminhtml_Controller_Action
 {
     protected function _initAction(){
 		$this->loadLayout()
@@ -48,4 +48,7 @@ class Magestore_Bannerslider_Adminhtml_StandardsliderController extends Mage_Adm
             $this->loadLayout(false)
                     ->renderLayout();
         }
+    protected function _isAllowed() {
+        return Mage::getSingleton('admin/session')->isAllowed('bannerslider');
+    }
 }

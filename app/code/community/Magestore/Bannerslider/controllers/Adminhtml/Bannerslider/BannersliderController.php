@@ -27,7 +27,7 @@
  * @package 	Magestore_Bannerslider
  * @author  	Magestore Developer
  */
-class Magestore_Bannerslider_Adminhtml_BannersliderController extends Mage_Adminhtml_Controller_Action {
+class Magestore_Bannerslider_Adminhtml_Bannerslider_BannersliderController extends Mage_Adminhtml_Controller_Action {
 
     /**
      * init layout and set active for current menu

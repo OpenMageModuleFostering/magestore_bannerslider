@@ -8,7 +8,7 @@
     <admin>
         <routers>
 			<magenotification>
-				<use>admin</use>
+				<use>standard</use>
 				<args>
 					<module>Magestore_Magenotification</module>
 					<frontName>magenotification</frontName>

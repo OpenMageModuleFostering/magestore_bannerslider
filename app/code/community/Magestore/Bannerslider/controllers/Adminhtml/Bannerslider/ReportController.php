@@ -27,7 +27,7 @@
  * @package 	Magestore_Bannerslider
  * @author  	Magestore Developer
  */
-class Magestore_Bannerslider_Adminhtml_ReportController extends Mage_Adminhtml_Controller_Action {
+class Magestore_Bannerslider_Adminhtml_Bannerslider_ReportController extends Mage_Adminhtml_Controller_Action {
 
     protected function _initAction() {
         $this->loadLayout()
@@ -101,5 +101,7 @@ class Magestore_Bannerslider_Adminhtml_ReportController extends Mage_Adminhtml_C
         $content = $this->getLayout()->createBlock('bannerslider/adminhtml_report_banner_grid')->getXml();
         $this->_prepareDownloadResponse($fileName, $content);
     }
-
+    protected function _isAllowed() {
+        return Mage::getSingleton('admin/session')->isAllowed('bannerslider');
+    }
 }

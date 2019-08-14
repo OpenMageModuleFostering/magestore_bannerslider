@@ -27,7 +27,7 @@
  * @package 	Magestore_Bannerslider
  * @author  	Magestore Developer
  */
-class Magestore_Bannerslider_Adminhtml_BannerController extends Mage_Adminhtml_Controller_Action {
+class Magestore_Bannerslider_Adminhtml_Bannerslider_BannerController extends Mage_Adminhtml_Controller_Action {
 
     /**
      * init layout and set active for current menu
@@ -86,15 +86,25 @@ class Magestore_Bannerslider_Adminhtml_BannerController extends Mage_Adminhtml_C
     }
 
     public function addinAction() {
+		$id = $this->getRequest()->getParam('id');
+        $store = $this->getRequest()->getParam('store');
+        $model = Mage::getModel('bannerslider/banner')->setStoreId($store)->load($id);
+
+        if ($model->getId() || $id == 0) {
+            $data = Mage::getSingleton('adminhtml/session')->getFormData(true);
+            if (!empty($data))
+                $model->setData($data);
+
+            Mage::register('banner_data', $model);
+		}
         $this->loadLayout();
         $this->_setActiveMenu('bannerslider/bannerslider');
 
         $this->_addBreadcrumb(Mage::helper('adminhtml')->__('Item Manager'), Mage::helper('adminhtml')->__('Item Manager'));
         $this->_addBreadcrumb(Mage::helper('adminhtml')->__('Item News'), Mage::helper('adminhtml')->__('Item News'));
-
-        $this->getLayout()->getBlock('head')->setCanLoadExtJs(true);
-
-        $this->_addContent($this->getLayout()->createBlock('bannerslider/adminhtml_addbutton')->setTemplate('bannerslider/addbanner.phtml'));
+         $this->getLayout()->getBlock('head')->setCanLoadExtJs(true);
+            $this->_addContent($this->getLayout()->createBlock('bannerslider/adminhtml_banner_edit'))
+                    ->_addLeft($this->getLayout()->createBlock('bannerslider/adminhtml_banner_edit_tabs'));
 
         $this->renderLayout();
     }
@@ -116,11 +126,13 @@ class Magestore_Bannerslider_Adminhtml_BannerController extends Mage_Adminhtml_C
             } else {
                 unset($data['image']);
             }
-             $times = explode(" ", now());
-                if ($data['end_time'] && $data['start_time']) {
-                    $data['start_time'] = $data['start_time']. " " . $times[1];
-                    $data['end_time'] = $data['end_time'] . " " . $times[1];
-                }
+                              
+            $data = $this->_filterDateTime($data,array('start_time','end_time'));      
+            try {
+                 $data['start_time']=date('Y-m-d H:i:s',Mage::getModel('core/date')->gmtTimestamp(strtotime($data['start_time'])));
+                 $data['end_time']=date('Y-m-d H:i:s',Mage::getModel('core/date')->gmtTimestamp(strtotime($data['end_time'])));
+            } catch (Exception $e) {}
+			
 			$model->setOrderBanner("7");
             $model->setData($data)
                     ->setStoreId($store)
@@ -138,6 +150,10 @@ class Magestore_Bannerslider_Adminhtml_BannerController extends Mage_Adminhtml_C
                 }
                 if ($this->getRequest()->getParam('back')) {
                     $this->_redirect('*/*/edit', array('id' => $model->getId(), 'store' => $this->getRequest()->getParam("store")));
+                    return;
+                }
+				 if ($this->getRequest()->getParam('addin')) {
+                    $this->_redirect('*/*/addin', array('id' => $model->getId(), 'store' => $this->getRequest()->getParam("store")));
                     return;
                 }
                 $this->_redirect('*/*/');
@@ -238,7 +254,7 @@ class Magestore_Bannerslider_Adminhtml_BannerController extends Mage_Adminhtml_C
     }
 
     protected function _isAllowed() {
-        return Mage::getSingleton('admin/session')->isAllowed('banner');
+        return Mage::getSingleton('admin/session')->isAllowed('bannerslider');
     }
 
 }
