@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>magestore_bannerslider</name>
+    <version>0.1.0</version>
+    <stability>stable</stability>
+    <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Banner slider</summary>
+    <description>banner slider</description>
+    <notes>Banner slider</notes>
+    <authors><author><name>Magestore</name><user>auto-converted</user><email>magestore@gmail.com</email></author></authors>
+    <date>2009-08-27</date>
+    <time>08:15:48</time>
+    <contents><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="bannerslider.xml" hash="821d565ea6febc6639cf1e45cb35d73c"/></dir></dir></dir></dir><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="bannerslider.xml" hash="d5ca32a732abc33650c2134bd2bd9317"/></dir><dir name="template"><dir name="bannerslider"><file name="bannerslider.phtml" hash="f5bffe8b9fb8f0cf4480105d094f334b"/></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="default"><dir name="default"><dir name="banner"><file name="ajaxtabs.js" hash="d8f9c4444580d285972803eed7392b8f"/><file name="banner.css" hash="e4186a5d5d445f618dec0fbbf913ad4b"/></dir></dir></dir></dir></target><target name="magecommunity"><dir name="Magestore"><dir name="BannerSlider"><dir name="Block"><file name="BannerSlider.php" hash="f3bf48266d8f25d953a6348450a6c5b0"/><dir name="Adminhtml"><file name="BannerSlider.php" hash="e86be47915b2c5c783d4f8dd76053731"/><dir name="BannerSlider"><file name="Edit.php" hash="27a03b7d9edb304bb252161010ad42fc"/><file name="Grid.php" hash="2371fcc3c951f85963e8d566ff1e2c1b"/><dir name="Edit"><file name="Form.php" hash="fc27dd66ff454e7bec3230f6330bf312"/><file name="Tabs.php" hash="d482e9de0cbcff022e32100f046cf6a3"/><dir name="Tab"><file name="Form.php" hash="89226c11bd7924bec072e197305914eb"/></dir></dir></dir></dir></dir><dir name="controllers"><file name="IndexController.php" hash="2701fd2d647d293e88c053875e8f62b3"/><dir name="Adminhtml"><file name="BannerSliderController.php" hash="546c4568affb2261ca474839f18601b2"/></dir></dir><dir name="etc"><file name="config.xml" hash="33e9642a5ea95cc6b6dc994fccfce1c0"/><file name="system.xml" hash="6304214d37e0aabd07858cc6be2a497c"/></dir><dir name="Helper"><file name="Data.php" hash="b8c6363b2e92df2a9c6675d93d14121f"/></dir><dir name="Model"><file name="BannerSlider.php" hash="b18b5aa6549e5ff16dcb1c3cff2e8aa6"/><file name="Status.php" hash="db55a762e08db515c8b1d371c54ceb23"/><dir name="Mysql4"><file name="BannerSlider.php" hash="1438dab305a87c9849be64043cdbf905"/><dir name="BannerSlider"><file name="Collection.php" hash="6a527b1b22c92802bacfe432ec265d65"/></dir></dir></dir><dir name="sql"><dir name="bannerslider_setup"><file name="mysql4-install-0.1.0.php" hash="5ac865813c0301833363f20a9dcf59c9"/></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>
