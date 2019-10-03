@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Magestore_BannerSlider",
+    "name": "OpenMageModuleFostering\/Magestore_BannerSlider",
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
     "description": "Magestore_BannerSlider",
     "authors": [
-    {
-        "name": "Magestore",
-        "email": "info@magestore.com"
-    }
-],
+        {
+            "name": "Magestore",
+            "email": "info@magestore.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
